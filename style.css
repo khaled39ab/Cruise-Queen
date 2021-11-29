@@ -125,4 +125,15 @@ nav ul li a:hover, a.active{
 .btn-hover{
     cursor: pointer;
 }
+#confirmArea{
+    display: none;
+    text-align: center;
+    margin-top: 400px;
+    color: aqua;
+}
+#costShow{
+    color: cyan;
+    text-decoration: underline;
+}
+
 

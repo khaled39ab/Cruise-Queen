@@ -1,3 +1,4 @@
+//plus minus button event 
 function handleTicket(ticket, isIncrease){
     const ticketInput = document.getElementById (ticket +'Count');
     const ticketCount = parseInt (ticketInput.value);
@@ -9,6 +10,8 @@ function handleTicket(ticket, isIncrease){
         ticketNewCount = ticketCount - 1 ;
     }
     ticketInput.value = ticketNewCount ;
+
+    calculateTotal();
 }
 document.getElementById ('firstClassIncrease').addEventListener ('click', function(){
     handleTicket('firstClass', true);
@@ -46,4 +49,34 @@ document.getElementById ('economyDecrease').addEventListener ('click', function(
     //     economyNewCount = economyCount - 1 ;
     // }
     // economyInput.value = economyNewCount;
-})
+});
+
+//calculation
+function calculateTotal(){
+    const firstClassInput = document.getElementById ('firstClassCount');
+    const firstClassCount = parseInt (firstClassInput.value);
+
+    const economyInput = document.getElementById ('economyCount');
+    const economyCount = parseInt (economyInput.value);
+
+    const subtotal = firstClassCount * 150 + economyCount * 100;
+    document.getElementById ('subtotal').innerText = '$' + subtotal;
+
+    const vat = Math.round(subtotal * 0.1);
+    document.getElementById ('vat').innerText = '$' + vat;
+
+    const total = subtotal + vat;
+    document.getElementById ('total').innerText = '$' + total;
+
+    document.getElementById ('costShow').innerText = '$' + total;
+};
+
+//Book now button event handler
+
+    const bookNow = document.getElementById ('bookNow').addEventListener ('click', function(){
+        const confirmPage = document.getElementById ('fontPage');
+        confirmPage.style.display = 'none';
+    
+        const confirmMessage = document.getElementById ('confirmArea');
+        confirmMessage.style.display = 'block';  
+    });

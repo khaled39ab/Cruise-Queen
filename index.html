@@ -27,7 +27,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main class="main-content container" id="fontPage">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
@@ -40,11 +40,11 @@
         <div class="booking-form">
             <h3>Book Ocean Time</h3>
             <div class="input-group">
-                <label for="">Flying From</label>
+                <label for="">From</label>
                 <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
-                <label for="">Flying To</label>
+                <label for="">To</label>
                 <input class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
@@ -88,7 +88,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p id="subtotal">$00</p>
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="vat">$0</p>
                     </div>
                 </div>
                 <hr>
@@ -106,13 +106,21 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total">$00</p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="bookNow" class="btn-style">Book Now</button>
         </div>
     </main>
+    <section id="confirmArea">
+        <div>
+            <h2>Confirmation Message</h2>
+            <p>You've successfully book Cruise Queen's seat. </p>
+            <p>Your total cost <span id="costShow"></span></p>
+            <p>Thank You. Stay with us...</p>
+        </div>
+    </section>
 
     <!--Thank You-->
 
